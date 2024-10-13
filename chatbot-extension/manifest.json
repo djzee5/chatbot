@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Chatbot Extension",
+  "version": "1.0",
+  "description": "A chatbot that interacts with users on a website.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"]
+    }
+  ]
+}
